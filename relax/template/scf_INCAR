@@ -1,0 +1,44 @@
+ SYSTEM = scf
+ ISTART = 0 
+ ICHARG = 2  # 1
+ PREC   = Accurate#Normal
+ ISYM   = 0
+ IVDW   = 11
+#NELECT = 402
+
+ ENCUT  = 500
+ NELM   = 300
+#NELMIN = 5
+ EDIFF  = 1.0E-05 #-04
+ ALGO   = Fast
+ ISMEAR = 0
+ SIGMA  = 0.10
+#AMIX   = 0.4
+#NBANDS = 216
+
+ EDIFFG = -0.01 # -0.05
+ NSW    = 0
+ IBRION = 2
+ ISIF   = 2
+ POTIM  = 0.02
+
+#ISPIN  = 1
+#MAGMOM = 4*1.1
+#LORBIT = 1
+
+ NGXF   = 128
+ NGYF   = 128
+ NGZF   = 128
+
+ LREAL  = Auto
+ LCHARG = .TRUE.
+ LAECHG = .TRUE.
+ LWAVE  = .TRUE.
+
+#LCLIMB = .TRUE.
+#ICHAIN = 0
+#IMAGES = 8
+#IBRION = 3
+#POTIM  = 0
+#IOPT   = 7
+#SPRING = -5

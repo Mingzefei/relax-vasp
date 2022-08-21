@@ -1,0 +1,25 @@
+#! /bin/bash
+echo ""
+echo ""
+echo "####################This script creats movie.xyz for each image####################"
+echo ""
+read -p "The nember of images:" n
+
+for i in `seq -f '%02g' 1 $n`
+do
+        cd ./$i/ &&xdat2xyz.pl XDATCAR
+        mv movie.xyz ../movie-$i.xyz
+        cd ..
+done
+
+echo ""
+echo "                 ####################Finished####################" 
+echo ""
+
+if [ -z $3 ];then
+    exit
+fi
+
+xyzmerge.py *.xyz $@
+gzip merge.xyz
+rm *.xyz
